@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.dungzi.villjabi" version="4" android-versionCode="4" xmlns="http://www.w3.org/ns/widgets"  xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.dungzi.villjabi" version="2" android-versionCode="2" xmlns="http://www.w3.org/ns/widgets"  xmlns:gap="http://phonegap.com/ns/1.0">
     <name>빌잡이</name>
     <description>	
         빌잡이
@@ -10,8 +10,10 @@
 	<preference name="AutoHideSplashScreen" value="false" />
 	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="android-minSdkVersion" value="15" />
-	<preference name="android-targetSdkVersion" value="26" />
-	<preference name="fullscreen" value="true" />
+	<preference name="android-targetSdkVersion" value="28" />
+	<preference name="fullscreen" value="false" />
+	<preference name="loadUrlTimeoutValue" value="60000" />
+
 
 	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
 	<gap:plugin name="cordova-plugin-inappbrowser" source="npm"  />
@@ -20,12 +22,14 @@
 	 <gap:plugin name="cordova-plugin-media-capture" source="npm" />
 	 <gap:plugin name="cordova-plugin-device" source="npm" />
 	 <gap:plugin name="cordova-plugin-media" source="npm" />
-	 <gap:plugin name="cordova-plugin-file" source="npm" />
 	
 	<allow-navigation href="*" />
 	<icon src="icon.png" />
 	<content src="index.html" />
 	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
 	<allow-intent href="sms:*" />
 	<allow-intent href="tel:*" />
+
 </widget>
